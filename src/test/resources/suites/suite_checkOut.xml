@@ -1,0 +1,9 @@
+<suite name="Suite One" >
+    <test name="Test until Checkout is Done" >
+        <classes>
+            <class name="tests.qa.RegisterTest" />
+            <class name="tests.qa.ShoppingCartTest" />
+            <class name="tests.qa.BuyItemTest" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-4.1.xsd
+	">
+
+    <!--data.Order Process -->
+        <bean name="itemData" class="qa.data.ItemData">
+            <property name="quantity" value="1"/>
+        </bean>
+    <!--data.Order Process -->
+
+    <bean name="billingData" class="qa.data.CheckOutBillingAddressData">
+        <property name="shipTheSameAddressCheckBox" value="true"/>
+        <property name="countryId" value="United States"/>  <!--USA-->
+        <property name="stateId" value="Alaska"/>    <!--Alaska-->
+        <property name="city" value="BigCity"/>
+        <property name="address_1" value="Donald Street 9"/>
+        <property name="postalCode" value="456"/>
+        <property name="phoneNumber" value="1234567"/>
+    </bean>
+
+    <bean name="shippingData" class="qa.data.CheckOutShippingAddressData">
+        <property name="ground_shipping_checkBox" value="false"/>
+        <property name="nextDay_shipping_checkBox" value="false"/>
+        <property name="secondDay_shipping_checkBox" value="true"/>
+    </bean>
+
+    <bean name="paymentData" class="qa.data.CheckOutPaymentTypeData">
+        <property name="check_Order" value="false"/>
+        <property name="creditCard_Order" value="true"/>
+        <property name="purchase_Order" value="false"/>
+    </bean>
+
+    <bean name="paymentInformationData" class="qa.data.CheckOutPaymentInformationData">
+        <property name="creditCardType" value="Master card"/>
+        <property name="cardholderName" value="John"/>
+        <property name="cardNumber" value="XXXXXX"/>  <!--Put Yours data here-->
+        <property name="expirationMonth" value="02"/> <!--Put Yours data here-->
+        <property name="expirationYear" value="2017"/> <!--Put Yours data here-->
+        <property name="cardCode"       value="XXXX"/> <!--Put Yours data here-->
+    </bean>
+
+    <bean name="checkOutConfirmData" class="qa.data.CheckOutConfirmOrderData">
+        <property name="confirm" value="false"/>
+    </bean>
+</beans>

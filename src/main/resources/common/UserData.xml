@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-4.1.xsd
+	">
+
+    <!--data.Registration Process -->
+
+    <bean id="userData" class="qa.common.User">
+        <!--Strong Password-->
+        <property name="password" value="7Mbz0m5lfpKUgsNrshrI"/>    <!-- Put Yours data here -->
+        <property name="email"    value="syhrxfw1qwertasd@lackmail.ru"/> <!-- Put Yours data here -->
+
+    </bean>
+
+
+    <!--data.Registration Process -->
+
+</beans>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/util
+		http://www.springframework.org/schema/util/spring-util-4.1.xsd
+	">
+
+    <import resource="classpath:common/UserData.xml"/>
+
+    <!--data.Registration Process -->
+
+
+    <bean id="registerData" class="qa.data.RegisterData">
+        <!--Gender-->
+        <property name="gender" value="true"/>
+        <!--Personal-->
+        <property name="firstName" value="John" />
+        <property name="lastName"  value="Smith"/>
+        <property name="email"     value="#{userData.email}" />
+
+        <property name="date" >
+            <bean class="java.util.Date" >
+                <constructor-arg value="1920"></constructor-arg> <!--Put Yours data here-->
+                <constructor-arg value="8"></constructor-arg>    <!--Put Yours data here-->
+                <constructor-arg value="11"></constructor-arg>   <!--Put Yours data here-->
+            </bean>
+        </property>
+
+        <!--Company Details-->
+        <property name="companyName" value="goodWorkers"/> <!--Put Yours data here-->
+
+        <!--Options-->
+        <property name="newsletter" value="true"/> <!--Put Yours data here-->
+
+        <!--User Password-->
+        <property name="password" value="#{userData.password}"/>
+        <property name="confirmPassword" value="#{userData.password}"/>
+
+    </bean>
+
+
+    <!--data.Registration Process -->
+
+</beans>

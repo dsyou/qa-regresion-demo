@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="testng.xsl"?>
+<suite name="All suit"  verbose="1"   parallel="false" thread-count="1" time-out="600000">
+
+    <listeners>
+        <listener class-name="tests.base.TestNGCustomReportListener" />
+    </listeners>
+    <suite-files>
+        <suite-file path="suites/suite_checkOut.xml"/>
+    </suite-files>
+</suite>
