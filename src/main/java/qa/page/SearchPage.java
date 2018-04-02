@@ -6,13 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 import qa.data.SearchData;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
-public class SearchPage extends BasePage<SearchPage>{
+public class SearchPage extends BasePage<SearchPage> {
 
-
-    @FindBy (id = "adv")
+    @FindBy(id = "adv")
     private WebElement searchAdvancedButton;
 
     @FindBy(css = "h2.product-title > a")
@@ -20,13 +20,7 @@ public class SearchPage extends BasePage<SearchPage>{
 
     private final static String cssSelector = ".product-title";
 
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
-
-
-    public  SearchPage() {
+    public SearchPage() {
         PageFactory.initElements(this.webDriver, this);
     }
 
@@ -35,21 +29,18 @@ public class SearchPage extends BasePage<SearchPage>{
         return searchAdvancedButton;
     }
 
-
-    public void checkResultSearching(SearchData searchDate){
+    public void checkResultSearching(SearchData searchDate) {
         isLoaded();
-        checkResult(searchDate.getSearchPhrase(),cssSelector);
+        checkResult(searchDate.getSearchPhrase(), cssSelector);
     }
-    public ItemPage choiceItem(){
+
+    public ItemPage choiceItem() {
         clickElement(linkToTheItem);
         return new ItemPage();
     }
 
-
-
-    public void useAdvancedSearch(){
-     clickElement(searchAdvancedButton);
+    public void useAdvancedSearch() {
+        clickElement(searchAdvancedButton);
     }
-
 
 }

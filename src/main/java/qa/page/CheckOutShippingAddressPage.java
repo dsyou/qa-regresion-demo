@@ -6,11 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 import qa.data.CheckOutShippingAddressData;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 public class CheckOutShippingAddressPage extends BasePage<CheckOutShippingAddressPage> {
-
 
     @FindBy(id = "shippingoption_0")
     private WebElement groundShipping;
@@ -24,9 +24,6 @@ public class CheckOutShippingAddressPage extends BasePage<CheckOutShippingAddres
     @FindBy(css = "input.button-1.shipping-method-next-step-button") //
     private WebElement continueButton;
 
-//############################################################################################################
-//### METHODS ################################################################################################
-//############################################################################################################
     public CheckOutShippingAddressPage() {
         PageFactory.initElements(this.webDriver, this);
     }
@@ -61,6 +58,5 @@ public class CheckOutShippingAddressPage extends BasePage<CheckOutShippingAddres
     private void setShippingMethod_secondDayAir() {
         clickElement(secondDayAirShipping);
     }
-
 
 }

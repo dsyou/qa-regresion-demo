@@ -3,8 +3,9 @@ package qa.data;
 import java.util.Date;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
  * DEMO Version ONLY required FIELD are implemented !!!
+ *
  * @author Dawid Janik github.com/dsyou
  */
 public class RegisterData {
@@ -25,11 +26,6 @@ public class RegisterData {
     //Password Area
     private String password;
     private String confirmPassword;
-
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
 
     public boolean isGender() {
         return gender;

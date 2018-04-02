@@ -7,8 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 import qa.common.User;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 public class LogInPage extends BasePage<LogInPage> {
 
@@ -18,22 +19,15 @@ public class LogInPage extends BasePage<LogInPage> {
     @FindBy(id = "Password")
     private WebElement passwordField;
 
-
     @FindBy(xpath = "//input[@value='Log in']")
     private WebElement buttonLog_In;
-
-
-
-//############################################################################################################
-//### HEAD METHODS ############################################################################################
-//############################################################################################################
 
     public LogInPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(this.webDriver, this);
     }
 
-    public void logIn(User user){
+    public void logIn(User user) {
         isLoaded();
 
         System.out.println(user.toString());
@@ -45,19 +39,15 @@ public class LogInPage extends BasePage<LogInPage> {
 
     }
 
-
-//############################################################################################################
-//### SET METHODS ############################################################################################
-//############################################################################################################
-    public void setEmail(String email){
-            sendValue(emailField,email);
+    public void setEmail(String email) {
+        sendValue(emailField, email);
     }
 
-    public void setPassword(String password){
-            sendValue(passwordField,password);
+    public void setPassword(String password) {
+        sendValue(passwordField, password);
     }
 
-    public void  pressButtonLog_In(){
+    public void pressButtonLog_In() {
         clickElement(buttonLog_In);
     }
 

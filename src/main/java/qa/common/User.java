@@ -2,9 +2,8 @@ package qa.common;
 
 /**
  * This program is not for Commercial purpose.
- * Demo Skills Only
  *
- * @author Dawid Janik github.com/dsyou
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 public class User {
 

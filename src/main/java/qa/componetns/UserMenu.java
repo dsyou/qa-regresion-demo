@@ -8,10 +8,11 @@ import qa.data.SearchData;
 import qa.page.*;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
-public class UserMenu extends BasePage{
+public class UserMenu extends BasePage {
 
     @FindBy(id = "customerCurrency")
     private WebElement currency;
@@ -34,55 +35,48 @@ public class UserMenu extends BasePage{
     @FindBy(id = "small-searchterms")
     private WebElement searchField;
 
-    @FindBy (xpath = "//input[@value='Search']")
+    @FindBy(xpath = "//input[@value='Search']")
     private WebElement searchButton;
 
     //private WebDriver webDriver;
 
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
-
-    public UserMenu(WebDriver webDriver){
-        this.webDriver  = webDriver;
-        PageFactory.initElements(this.webDriver,this);
+    public UserMenu(WebDriver webDriver) {
+        this.webDriver = webDriver;
+        PageFactory.initElements(this.webDriver, this);
     }
+
     public WebElement getPageUniqueElement() {
         return shoppingCart;
     }
 
-    public void setCurrency(){
-    }
-
-
-    public LogInPage pressLogIn(){
-            clickElement(logIn);
+    public LogInPage pressLogIn() {
+        clickElement(logIn);
         return new LogInPage(this.webDriver);
     }
 
-    public void pressWishlist(){
+    public void pressWishlist() {
         clickElement(wishlist);
     }
 
-    public RegisterPage pressRegister(){
+    public RegisterPage pressRegister() {
         clickElement(register);
         return new RegisterPage(this.webDriver);
     }
 
-    public ShoppingCartPage pressShoppingCart(){
+    public ShoppingCartPage pressShoppingCart() {
         clickElement(shoppingCart);
-        return  new ShoppingCartPage();
+        return new ShoppingCartPage();
     }
 
     public void pressLogOut() {
         clickElement(logOUT);
     }
 
-    public SearchPage searchItem(SearchData searchData){
-        sendValue(searchField,searchData.getSearchPhrase());
+    public SearchPage searchItem(SearchData searchData) {
+        sendValue(searchField, searchData.getSearchPhrase());
         clickElement(searchButton);
 
-        return  new SearchPage();
+        return new SearchPage();
     }
 
 }

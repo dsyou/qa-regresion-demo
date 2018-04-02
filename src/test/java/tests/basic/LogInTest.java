@@ -7,12 +7,12 @@ import qa.page.LogInPage;
 import tests.base.BaseTest;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
- *
  * This Test is checking that user account is Active
+ * This program is not for Commercial purpose, Demo Skills Only
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
+ * <p>
  */
-
 @Test(description = "Log In and Log Out")
 public class LogInTest extends BaseTest {
 
@@ -22,13 +22,14 @@ public class LogInTest extends BaseTest {
     private LogInPage logInPage;
 
     @Test(description = "Log In User")
-    public void logInUser(){
-        logInPage =  userMenu.pressLogIn();
+    public void logInUser() {
+        logInPage = userMenu.pressLogIn();
         logInPage.logIn(user);
     }
+
     @Test(description = "Log Out User", dependsOnMethods = "logInUser")
-    public void logOutUSer(){
-           userMenu.pressLogOut();
+    public void logOutUSer() {
+        userMenu.pressLogOut();
     }
 
 

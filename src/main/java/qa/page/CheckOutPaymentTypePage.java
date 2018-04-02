@@ -7,26 +7,24 @@ import org.testng.Assert;
 import qa.data.CheckOutPaymentTypeData;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 public class CheckOutPaymentTypePage extends BasePage<CheckOutPaymentTypePage> {
 
-    @FindBy(id="paymentmethod_0")
+    @FindBy(id = "paymentmethod_0")
     private WebElement checkOrder_checkBox;
 
-    @FindBy(id="paymentmethod_1")
+    @FindBy(id = "paymentmethod_1")
     private WebElement creditCart_checkBox;
 
-    @FindBy(id="paymentmethod_2")
+    @FindBy(id = "paymentmethod_2")
     private WebElement purchase_checkBox;
 
-    @FindBy(css="input.button-1.payment-method-next-step-button")
-    private  WebElement continue_Button;
+    @FindBy(css = "input.button-1.payment-method-next-step-button")
+    private WebElement continue_Button;
 
-//############################################################################################################
-//### METHODS ################################################################################################
-//############################################################################################################
     protected CheckOutPaymentTypePage() {
         PageFactory.initElements(this.webDriver, this);
     }
@@ -35,13 +33,12 @@ public class CheckOutPaymentTypePage extends BasePage<CheckOutPaymentTypePage> {
         return creditCart_checkBox;
     }
 
-
-    public CheckOutPaymentsInformationPage setPaymentMethod(CheckOutPaymentTypeData data){
+    public CheckOutPaymentsInformationPage setPaymentMethod(CheckOutPaymentTypeData data) {
         isLoaded();
 
-        Assert.assertFalse(data.isCheck_Order(),"DEMO ONLY");
-        Assert.assertFalse(data.isPurchase_Order(),"DEMO ONLY");
-        if (data.isCreditCard_Order()){
+        Assert.assertFalse(data.isCheck_Order(), "DEMO ONLY");
+        Assert.assertFalse(data.isPurchase_Order(), "DEMO ONLY");
+        if (data.isCreditCard_Order()) {
             setCreditCart_checkBox();
         }
 
@@ -50,7 +47,7 @@ public class CheckOutPaymentTypePage extends BasePage<CheckOutPaymentTypePage> {
         return new CheckOutPaymentsInformationPage();
     }
 
-    public void setCreditCart_checkBox(){
+    public void setCreditCart_checkBox() {
         clickElement(creditCart_checkBox);
     }
 

@@ -5,30 +5,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
-public class ShoppingCartPage extends BasePage<ShoppingCartPage>{
+public class ShoppingCartPage extends BasePage<ShoppingCartPage> {
 
     @FindBy(id = "checkout")
-    private  WebElement checkOutButton;
+    private WebElement checkOutButton;
 
-    @FindBy (id = "termsofservice")
+    @FindBy(id = "termsofservice")
     private WebElement agreeTermsCheckBox;
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
 
     public WebElement getPageUniqueElement() {
         return checkOutButton;
     }
 
-    public ShoppingCartPage(){
-        PageFactory.initElements(this.webDriver,this);
+    public ShoppingCartPage() {
+        PageFactory.initElements(this.webDriver, this);
     }
 
-    public CheckOutBillingAddressPage checkOUT(){
+    public CheckOutBillingAddressPage checkOUT() {
         isLoaded();
 
         clickElement(agreeTermsCheckBox);
@@ -36,6 +33,5 @@ public class ShoppingCartPage extends BasePage<ShoppingCartPage>{
 
         return new CheckOutBillingAddressPage();
     }
-
 
 }

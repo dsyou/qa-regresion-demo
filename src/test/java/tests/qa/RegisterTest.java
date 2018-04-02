@@ -9,12 +9,14 @@ import tests.base.BaseTest;
 
 /**
  * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
- *
+ * <p>
+ * <p>
  * 1. go to home
  * 2. go to register
  * 3. fill register
  * 4. end
+ *
+ * @author Dawid Janik github.com/dsyou
  */
 @Test(description = "Register")
 public class RegisterTest extends BaseTest {
@@ -26,10 +28,10 @@ public class RegisterTest extends BaseTest {
 
     @Test(description = "1. Go to Home Page")
     public void loginUser() {
-         registerPage = userMenu.pressRegister();
+        registerPage = userMenu.pressRegister();
     }
 
-    @Test(description = "2. Try Register a new User" , dependsOnMethods = {"loginUser"})
+    @Test(description = "2. Try Register a new User", dependsOnMethods = {"loginUser"})
     public void registerUser() {
         System.out.println(registerData);
         registerPage.registerUser(registerData);

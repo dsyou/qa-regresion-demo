@@ -34,12 +34,8 @@ public class BuyItemTest extends BaseTest{
     @Autowired
     private CheckOutConfirmOrderData checkOutConfirmData;
 
-    //##############Pages
     private CheckOutBillingAddressPage checkOutBillingAddressPage;
 
-//############################################################################################################
-//### METHODS ################################################################################################
-//############################################################################################################
     @Test(description = "1.Log In")
     public void logInUser(){
         LogInPage logInPage = userMenu.pressLogIn();

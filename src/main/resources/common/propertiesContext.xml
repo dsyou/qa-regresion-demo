@@ -15,8 +15,6 @@
         <property name="location" value="classpath:configuration/webtest.properties.properties"/>
 
     </bean>
-
-
     <!--Properties-->
 
 </beans>

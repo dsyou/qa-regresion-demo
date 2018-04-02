@@ -1,9 +1,11 @@
 package qa.data;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
+ * Demo Skills Only
  * DEMO Version ONLY required FIELD are implemented !!!
- * @author Dawid Janik github.com/dsyou
+ *
+ * @author Dawid Janik {github.com/dsyou}
  */
 public class CheckOutBillingAddressData {
 
@@ -18,10 +20,6 @@ public class CheckOutBillingAddressData {
     private String postalCode;
     private String phoneNumber;
 
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
     public boolean isShipTheSameAddressCheckBox() {
         return shipTheSameAddressCheckBox;
     }

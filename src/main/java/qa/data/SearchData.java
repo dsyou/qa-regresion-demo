@@ -1,17 +1,14 @@
 package qa.data;
+
 /**
- * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose,
+ *
+ * @author Dawid Janik {github.com/dsyou}
  */
 public class SearchData {
 
     private String searchPhrase;
-    private int  quantity;
-
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
+    private int quantity;
 
     public String getSearchPhrase() {
         return searchPhrase;

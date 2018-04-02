@@ -7,8 +7,9 @@ import qa.page.ItemPage;
 import tests.base.BaseTest;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 @Test(description = "Check Item View and adding to Cart with Quantity")
 public class ItemViewTest extends BaseTest {
@@ -16,8 +17,8 @@ public class ItemViewTest extends BaseTest {
     @Autowired
     private ItemData itemData;
 
-    @Test(description = "1.Add To Cart Item" )
-    public void addToCartItem(){
+    @Test(description = "1.Add To Cart Item")
+    public void addToCartItem() {
         ItemPage itemPage = new ItemPage(); // Need specify URL to item !!!
         itemPage.addToCart(itemData.getQuantity());
     }

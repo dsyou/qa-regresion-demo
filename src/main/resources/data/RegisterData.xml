@@ -14,7 +14,6 @@
 
     <!--data.Registration Process -->
 
-
     <bean id="registerData" class="qa.data.RegisterData">
         <!--Gender-->
         <property name="gender" value="true"/>
@@ -42,7 +41,6 @@
         <property name="confirmPassword" value="#{userData.password}"/>
 
     </bean>
-
 
     <!--data.Registration Process -->
 

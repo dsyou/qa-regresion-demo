@@ -11,12 +11,9 @@
 	">
 
     <!--data.Search Process -->
-
     <bean id="searchData" class="qa.data.SearchData">
-
         <property name="searchPhrase" value="HTC One Mini Blue"/>
     </bean>
-
     <!--data.Search Process -->
 
 </beans>

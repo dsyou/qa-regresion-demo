@@ -1,8 +1,10 @@
 package qa.data;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
+ * Demo Skills Only
  * DEMO Version ONLY required FIELD are implemented !!!
+ *
  * @author Dawid Janik github.com/dsyou
  */
 public class CheckOutShippingAddressData {
@@ -11,11 +13,6 @@ public class CheckOutShippingAddressData {
     private boolean nextDay_shipping_checkBox;
 
     private boolean secondDay_shipping_checkBox;
-
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
 
     public boolean isGround_shipping_checkBox() {
         return ground_shipping_checkBox;

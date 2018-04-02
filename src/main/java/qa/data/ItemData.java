@@ -1,17 +1,15 @@
 package qa.data;
 
 /**
- * This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
  * DEMO Version ONLY required FIELD are implemented !!!
+ *
  * @author Dawid Janik github.com/dsyou
  */
 public class ItemData {
 
-    int quantity;
+    private int quantity;
 
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
     public int getQuantity() {
         return quantity;
     }

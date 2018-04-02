@@ -9,28 +9,28 @@ import qa.data.CheckOutBillingAddressData;
 
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
+ *
  * @author Dawid Janik github.com/dsyou
  */
-public class CheckOutBillingAddressPage extends BasePage<CheckOutBillingAddressPage>{
-
+public class CheckOutBillingAddressPage extends BasePage<CheckOutBillingAddressPage> {
 
     @FindBy(id = "ShipToSameAddress")
     private WebElement shipCheckBox;
 
-    @FindBy(id= "BillingNewAddress_CountryId")
+    @FindBy(id = "BillingNewAddress_CountryId")
     private WebElement countryId;
 
     @FindBy(id = "BillingNewAddress_City")
     private WebElement cityName;
 
-    @FindBy(id= "BillingNewAddress_StateProvinceId")
+    @FindBy(id = "BillingNewAddress_StateProvinceId")
     private WebElement stateId;
 
-    @FindBy(id= "BillingNewAddress_Address1")
+    @FindBy(id = "BillingNewAddress_Address1")
     private WebElement address_1;
 
-    @FindBy(id= "BillingNewAddress_ZipPostalCode")
+    @FindBy(id = "BillingNewAddress_ZipPostalCode")
     private WebElement zipCode;
 
     @FindBy(id = "BillingNewAddress_PhoneNumber")
@@ -39,15 +39,11 @@ public class CheckOutBillingAddressPage extends BasePage<CheckOutBillingAddressP
     @FindBy(css = "input.button-1.new-address-next-step-button")
     private WebElement continueButton;
 
-//############################################################################################################
-//### METHODS ################################################################################################
-//############################################################################################################
-
     public WebElement getPageUniqueElement() {
         return continueButton;
     }
 
-    public CheckOutBillingAddressPage(){
+    public CheckOutBillingAddressPage() {
         PageFactory.initElements(this.webDriver, this);
     }
 
@@ -70,22 +66,20 @@ public class CheckOutBillingAddressPage extends BasePage<CheckOutBillingAddressP
     private void setCountry(String name) {
         clickElement(countryId);
 
-        selectByVisibleText(countryId,name);
-
+        selectByVisibleText(countryId, name);
     }
 
     private void setState(String name) {
         clickElement(stateId);
-        selectByVisibleText(stateId,name);
-
-
+        selectByVisibleText(stateId, name);
     }
+
     private void setCity(String city) {
-        sendValue(cityName,city);
+        sendValue(cityName, city);
     }
 
     private void setAddress_1(String address) {
-        sendValue(address_1,address);
+        sendValue(address_1, address);
     }
 
     private void setZipCode(String code) {
@@ -95,7 +89,6 @@ public class CheckOutBillingAddressPage extends BasePage<CheckOutBillingAddressP
     private void setPhoneNumber(String number) {
         sendValue(phoneNumber, number);
     }
-
 
 
 }

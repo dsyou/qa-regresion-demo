@@ -6,28 +6,23 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
-public class ItemPage extends BasePage<ItemPage>{
+public class ItemPage extends BasePage<ItemPage> {
 
     @FindBy(xpath = "//div/input[2]")
-    WebElement addButton;
+    private WebElement addButton;
 
     @FindBy(xpath = "//div/input")
-    WebElement quantity;
+    private WebElement quantity;
 
-
-
-//############################################################################################################
-//### METHODS ############################################################################################
-//############################################################################################################
-
-    public ItemPage(){
-       PageFactory.initElements(this.webDriver, this);
+    public ItemPage() {
+        PageFactory.initElements(this.webDriver, this);
     }
 
-    public ItemPage(String url){
+    public ItemPage(String url) {
 
         PageFactory.initElements(this.webDriver, this);
     }
@@ -36,18 +31,16 @@ public class ItemPage extends BasePage<ItemPage>{
         return addButton;
     }
 
-
-    public void addToCart(int q){
+    public void addToCart(int q) {
         isLoaded();
         setQuantinty(q);
         clickElement(addButton);
     }
 
-
-    private void setQuantinty(int actual){
-        Assert.assertEquals(actual,1,"This program is ONLY FOR NOT COMMERCIAL PURPOSE!!");
+    private void setQuantinty(int actual) {
+        Assert.assertEquals(actual, 1, "This program is ONLY FOR NOT COMMERCIAL PURPOSE!!");
         clearValue(quantity);
-        sendValue(quantity,""+actual);
+        sendValue(quantity, "" + actual);
     }
 
 }

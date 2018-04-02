@@ -13,12 +13,14 @@ import tests.base.BaseTest;
 
 /**
  * This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
- *
+ * <p>
+ * <p>
  * 1.Log In User
  * 2.Search HTC Blue One
  * 3.Add To Cart
  * 4. End Test
+ *
+ * @author Dawid Janik github.com/dsyou
  */
 @Test(description = "Add To Cart Preferred Item")
 public class ShoppingCartTest extends BaseTest {
@@ -32,28 +34,24 @@ public class ShoppingCartTest extends BaseTest {
     @Autowired
     private SearchData searchData;
 
-
-
-    private  ItemPage itemPage;
+    private ItemPage itemPage;
 
     @Test(description = "1.Log In")
-    public void logInUser(){
+    public void logInUser() {
         LogInPage logInPage = userMenu.pressLogIn();
         logInPage.logIn(user);
     }
 
-    @Test(description = "2.Search for Item and Check Result" , dependsOnMethods = "logInUser")
-    public void searchItem(){
-       SearchPage searchPage = userMenu.searchItem(searchData);
-       searchPage.checkResultSearching(searchData);
-       itemPage = searchPage.choiceItem();
+    @Test(description = "2.Search for Item and Check Result", dependsOnMethods = "logInUser")
+    public void searchItem() {
+        SearchPage searchPage = userMenu.searchItem(searchData);
+        searchPage.checkResultSearching(searchData);
+        itemPage = searchPage.choiceItem();
     }
 
-    @Test(description = "3.Add To Cart" , dependsOnMethods = "searchItem")
-    public void addToCartItem(){
+    @Test(description = "3.Add To Cart", dependsOnMethods = "searchItem")
+    public void addToCartItem() {
         itemPage.addToCart(itemData.getQuantity());
     }
-
-
 
 }

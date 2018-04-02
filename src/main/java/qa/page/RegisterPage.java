@@ -9,8 +9,9 @@ import qa.data.RegisterData;
 import java.util.Date;
 
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
- * @author Dawid Janik github.com/dsyou
+ * This program is not for Commercial purpose.
+ *
+ * @author Dawid Janik {@linktourl github.com/dsyou}
  */
 public class RegisterPage extends BasePage<RegisterPage> {
 
@@ -28,7 +29,6 @@ public class RegisterPage extends BasePage<RegisterPage> {
     @FindBy(id = "LastName")
     private WebElement lastName;
 
-
     @FindBy(name = "DateOfBirthDay")
     private WebElement birthDay;
 
@@ -37,7 +37,6 @@ public class RegisterPage extends BasePage<RegisterPage> {
 
     @FindBy(name = "DateOfBirthYear")
     private WebElement birthYear;
-
 
     @FindBy(id = "Email")
     private WebElement email;
@@ -64,21 +63,18 @@ public class RegisterPage extends BasePage<RegisterPage> {
     @FindBy(xpath = "//input[@name='register-continue']")
     private WebElement buttonRegisterContinue;
 
-
-//    private WebDriver webDriver;
-
-//############################################################################################################
-//### HEAD METHODS ############################################################################################
-//############################################################################################################
+    // private WebDriver webDriver;
 
     public RegisterPage(WebDriver webDriver) {
-//        this.webDriver  = webDriver;
+        //        this.webDriver  = webDriver;
         PageFactory.initElements(this.webDriver, this);
     }
+
     @Override
     public WebElement getPageUniqueElement() {
         return buttonRegister;
     }
+
     public void registerUser(RegisterData data) {
         isLoaded();
 
@@ -100,9 +96,6 @@ public class RegisterPage extends BasePage<RegisterPage> {
         clickElement(buttonRegisterContinue);
     }
 
-//############################################################################################################
-//### SET METHODS ############################################################################################
-//############################################################################################################
     protected void setGender(boolean t) {
         if (t) {
             clickElement(genderMale);
@@ -132,21 +125,18 @@ public class RegisterPage extends BasePage<RegisterPage> {
     }
 
     protected void setBirthDay(int day) {
-
         clickElement(birthDay);
         selectByIndex(birthDay, day);
     }
 
     protected void setBirthMonth(int month) {
-
         clickElement(birthMonth);
         selectByIndex(birthMonth, month);
-
     }
 
     protected void setBirthYear(Integer year) {
         clickElement(birthYear);
-        selectByValue(birthYear,year.toString());
+        selectByValue(birthYear, year.toString());
     }
 
     protected void setCompanyName(String companyName) {
@@ -159,7 +149,6 @@ public class RegisterPage extends BasePage<RegisterPage> {
         } else {
             clickElement(newsletter);
         }
-
     }
 
     protected void setPassword(String pass) {
@@ -169,7 +158,5 @@ public class RegisterPage extends BasePage<RegisterPage> {
     protected void setConfirmPassword(String pass) {
         sendValue(confirmPassword, pass);
     }
-
-
 
 }
