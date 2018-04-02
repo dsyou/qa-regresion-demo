@@ -1,14 +1,15 @@
 package qa.common;
+
 /**
- *  This program is not for Commercial purpose, Demo Skills Only
+ * This program is not for Commercial purpose.
+ * Demo Skills Only
+ *
  * @author Dawid Janik github.com/dsyou
  */
 public class User {
 
     private String password;
     private String email;
-
-
 
     public String getPassword() {
         return password;
